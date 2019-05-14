@@ -6,7 +6,7 @@ class SearchBar extends React.Component {
     onFormSubmit = (event) => {  // Must be arrow function to bind 'this' and avoid TypeError
         event.preventDefault();
 
-        console.log(this.state.term);
+        this.props.onHyloSubmit(this.state.term);
     }
 
     render() {
